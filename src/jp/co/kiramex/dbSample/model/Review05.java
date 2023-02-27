@@ -32,8 +32,10 @@ public class Review05 {
             // 5, 6. Select文の実行と結果を格納／代入
             System.out.print("検索キーワードを入力してください > ");
             String input = keyIn();
+            
+            int num = Integer.parseInt(input);
 
-            pstmt.setString(1, input);
+            pstmt.setInt(1, num);
             rs = pstmt.executeQuery();
 
             // 7. 結果を表示する
